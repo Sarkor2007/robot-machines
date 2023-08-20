@@ -71,6 +71,7 @@ html::-webkit-scrollbar-thumb {
 
 .header {
     padding: 25px 0;
+    border-bottom: 1px solid rgba(37, 35, 38, 0.4);
 }
 
 .header .container {
@@ -101,7 +102,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 .contact {
-    border-top: 1px solid rgba(37, 35, 38, 0.4);
     border-bottom: 1px solid rgba(37, 35, 38, 0.4);
     padding: 25px 0;
     display: flex;
@@ -135,6 +135,7 @@ html::-webkit-scrollbar-thumb {
 
 .welcome {
     margin-top: 50px;
+    padding-bottom: 20px;
 }
 
 .welcome img {
@@ -143,7 +144,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .course {
-    margin-top: 80px;
+    margin-top: 60px;
     padding-bottom: 20px;
 }
 
@@ -364,7 +365,7 @@ html::-webkit-scrollbar-thumb {
     overflow: visible;
 }
 
-.swiper-slide {
+.feedback .swiper-slide {
     border-radius: 35px;
     border: 3px solid var(--primary-gray);
     display: flex;
@@ -469,6 +470,7 @@ html::-webkit-scrollbar-thumb {
 .questions__item-header-img {
     width: 22px;
     height: 22px;
+    user-select: none;
 }
 
 .questions__item-header-img img {
@@ -547,4 +549,402 @@ html::-webkit-scrollbar-thumb {
     font-family: 'Rubik';
     font-size: 40px;
     font-weight: 500;
+}
+
+/* ====  enroll  ==== */
+
+.enroll {
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.enroll .title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.enroll-wrapper {
+    display: flex;
+    gap: 15px;
+    height: 350px;
+}
+
+.enroll__info {
+    width: 575px;
+    height: 100%;
+    padding: 50px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.enroll__info-title {
+    color: var(--primary-white);
+    text-align: center;
+    font-family: 'Akzidenz';
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.enroll__info-img {
+    width: 220px;
+    height: 200px;
+}
+
+.enroll__info-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.enroll__info,
+.enroll__form {
+    border-radius: 35px;
+    border: 1px solid var(--primary-black);
+    background: var(--primary-gray);
+}
+
+.enroll__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% - 15px - 375px);
+    padding: 50px 60px;
+    row-gap: 50px;
+}
+
+.enroll__form-item {
+    width: calc(50% - 25px);
+}
+
+.enroll__form-input {
+    outline: none;
+    display: block;
+    width: 100%;
+    color: var(--primary-white);
+    font-family: 'Akzidenz';
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    border: 1px solid var(--primary-white);
+    padding: 22px 25px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.enroll__form-input::placeholder {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.enroll__form-label {
+    color: var(--primary-white);
+    font-family: 'Akzidenz';
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.enroll__form-text {
+    color: var(--primary-white);
+    font-family: 'Rubik';
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+}
+
+.enroll__form-text span {
+    text-decoration-line: underline;
+}
+
+.enroll__form-btn {
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid var(--primary-white);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-white);
+    text-align: center;
+    font-family: 'Akzidenz';
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 70px;
+}
+
+/* ----- second enroll ------ */
+
+.enroll-second .title {
+    margin-bottom: 20px;
+}
+
+.enroll-second .enroll__form-input {
+    border: 1px solid var(--primary-yellow);
+}
+
+.enroll-second .enroll__form-btn {
+    border: 1px solid var(--primary-yellow);
+}
+
+.enroll-second .enroll__form {
+    width: calc(100% - 30px - 375px - 73px);
+    padding: 50px 60px;
+}
+
+.enroll-second .enroll-wrapper {
+    height: 320px;
+}
+
+
+.enroll-second .enroll__form {
+    padding: 30px 60px;
+}
+
+.enroll-second .enroll__info {
+    padding: 30px 40px 10px;
+}
+
+
+.enroll__social {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.enroll__social-link {
+    width: 73px;
+    height: 73px;
+    border-radius: 20px;
+    background: var(--primary-gray);
+    display: inline-block;
+    padding: 9px;
+}
+
+.enroll__social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* ====  about  ==== */
+
+.about {
+    margin-top: 45px;
+}
+
+.about-wrapper {
+    border-radius: 35px;
+    background: var(--primary-gray);
+    padding: 30px 40px 45px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-title {
+    color: var(--primary-white);
+    font-family: 'Akzidenz';
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.about__list-text {
+    color: var(--primary-white);
+    font-family: 'Rubik';
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 36px
+}
+
+.about__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.about__list {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 700px;
+}
+
+/* ====  vacancy   ===== */
+
+.vacancy {
+    margin-top: 25px;
+}
+
+.vacancy__list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vacancy__list-item {
+    border-radius: 35px;
+    border: 1px solid var(--primary-black);
+    padding: 30px 0 20px;
+}
+
+.vacancy__item-head {
+    padding: 0 20px;
+}
+
+.vacancy__item-title {
+    color: var(--primary-gray);
+    font-family: 'Rubik';
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.vacancy__item-subtitle {
+    color: var(--primary-gray);
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.vacancy__item-text {
+    margin-top: 20px;
+    border-top: 1px solid var(--primary-gray);
+    padding: 15px 45px 0 20px;
+    color: #252326;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.vacancy__item-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+.vacancy__item-btn button {
+    border-radius: 25px;
+    border: 2px solid var(--primary-gray);
+    width: 330px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-gray);
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.vacancy__item-btn button:hover {
+    color: var(--primary-white);
+    background-color: var(--primary-gray);
+    transition: .3s all;
+}
+
+
+/* ====  partners  ==== */
+
+.partners {
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+
+.partners-swiper {
+    margin-top: 40px;
+}
+
+.partners .swiper-slide {
+    border-radius: 25px;
+    border: 3px solid var(--primary-gray);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 0 21px;
+}
+
+.partners .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==== bepartner ==== */
+
+.bepartner {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.bepartner__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.bepartner__list-item {
+    border-radius: 35px;
+    background: var(--primary-gray);
+    width: calc(50% - 15px);
+    padding: 40px 30px 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bepartner__item-title {
+    color: var(--primary-white);
+    font-family: 'Akzidenz';
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.bepartner__item-text {
+    margin-top: 16px;
+    color: var(--primary-white);
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.bepartner__item-content {
+    width: calc(100% - 110px);
+}
+
+.bepartner__item-num {
+    padding-right: 15px;
+    color: var(--primary-white);
+    font-family: 'Akzidenz';
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.bepartner__item-num.one{
+    text-shadow: 5px 5px 20px #4800FF, 5px -5px 20px #4800FF, -5px 5px 20px #4800FF, -5px -5px 20px #4800FF;
+}
+
+.bepartner__item-num.two {
+    text-shadow: 5px 5px 20px #FF9A00, 5px -5px 20px #FF9A00, -5px 5px 20px #FF9A00, -5px -5px 20px #FF9A00;
+}
+
+.bepartner__item-num.three {
+    text-shadow: 5px 5px 20px #E34D52, 5px -5px 20px #E34D52, -5px 5px 20px #E34D52, -5px -5px 20px #E34D52;
+}
+
+.bepartner__item-num.four {
+    text-shadow: 5px 5px 20px #13A072, 5px -5px 20px #13A072, -5px 5px 20px #13A072, -5px -5px 20px #13A072;
 }
