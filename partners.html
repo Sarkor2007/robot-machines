@@ -6,45 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot Machines</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+    <div class="filter"></div>
     <header class="header">
         <div class="container">
-         <a href="index.html" class="header-logo">
+            <a href="index.html" class="header-logo">
                 <img src="images/icons/logo.svg" alt="logo">
             </a>
             <nav class="nav">
+                <div class="nav__exit">
+                    <div class="nav__exit-btn"></div>
+                </div>
                 <ul class="nav__list">
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Главная</a>
+                        <a class="nav__list-link" href="index.html">Главная</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">О нас</a>
+                        <a class="nav__list-link" href="#whyus">О нас</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Курсы</a>
+                        <a class="nav__list-link" href="courses.html">Курсы</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Отзывы</a>
+                        <a class="nav__list-link" href="#feedback">Отзывы</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Вопрос-Ответ</a>
+                        <a class="nav__list-link" href="#questions">Вопрос-Ответ</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Контакты</a>
+                        <a class="nav__list-link" href="contacts.html">Контакты</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Вакансии</a>
+                        <a class="nav__list-link" href="vacancies.html">Вакансии</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#">Партнеры</a>
+                        <a class="nav__list-link" href="partners.html">Партнеры</a>
                     </li>
                 </ul>
             </nav>
+            <div class="nav__open">
+                <div class="nav__open-btn">
+                    <div class="btn-elem"></div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -86,64 +95,49 @@
 
         <div class="container">
             <ul class="bepartner__list">
-                <li class="bepartner__list-item">
+                <li class="bepartner__list-item gs_reveal gs_reveal_fromLeft">
                     <div class="bepartner__item-content">
                         <h3 class="bepartner__item-title">
-                            Условие сотрудничества
+                            Условие сотрудничества для частных школ
                         </h3>
                         <p class="bepartner__item-text">
-                            Lorem ipsum dolor sit amet consectetur. Dis maecenas ultrices gravida etiam faucibus lorem
-                            diam
-                            morbi ac. Augue pretium mattis morbi
+                            Мы открыты к сотрудничеству с частными школами и готовы предложить Вам полную методичку и
+                            преподавательский состав для проведения уроков по робототехнике и IT, а также предоставлять
+                            все необходимые материалы для уроков.
                         </p>
                     </div>
                     <div class="bepartner__item-num one">
                         1
                     </div>
                 </li>
-                <li class="bepartner__list-item">
+                <li class="bepartner__list-item gs_reveal gs_reveal_fromRight">
                     <div class="bepartner__item-content">
                         <h3 class="bepartner__item-title">
-                            Условие сотрудничества
+                            Условие сотрудничества для выездных мастер-классов
                         </h3>
                         <p class="bepartner__item-text">
-                            Lorem ipsum dolor sit amet consectetur. Dis maecenas ultrices gravida etiam faucibus lorem
-                            diam
-                            morbi ac. Augue pretium mattis morbi
+                            Наш клуб RM предоставляет услуги по выезду на мастер классы по робототехнике и IT, в любую
+                            точку Узбекистана и соседних стран. Это могут быть эксперименты, сборки или проведение
+                            выбранных Вами тем, всё необходимое для проведение мастер классов, мы берем на себя!
                         </p>
                     </div>
                     <div class="bepartner__item-num two">
                         2
                     </div>
                 </li>
-                <li class="bepartner__list-item">
+                <li class="bepartner__list-item gs_reveal gs_reveal_fromLeft">
                     <div class="bepartner__item-content">
                         <h3 class="bepartner__item-title">
-                            Условие сотрудничества
+                            Условие сотрудничества для учебных центров
                         </h3>
                         <p class="bepartner__item-text">
-                            Lorem ipsum dolor sit amet consectetur. Dis maecenas ultrices gravida etiam faucibus lorem
-                            diam
-                            morbi ac. Augue pretium mattis morbi
+                            Если у вас есть учебный центр, мы рады работать вместе! Наша команда непрерывно расширяется
+                            и поэтому мы открыты к сотрудничеству с учебными центрами, которые готовы предложить нам
+                            свои кабинеты на выходные дни, либо преподавать робототехнику или IT, Вашим ученикам.
                         </p>
                     </div>
                     <div class="bepartner__item-num three">
                         3
-                    </div>
-                </li>
-                <li class="bepartner__list-item ">
-                    <div class="bepartner__item-content">
-                        <h3 class="bepartner__item-title">
-                            Условие сотрудничества
-                        </h3>
-                        <p class="bepartner__item-text">
-                            Lorem ipsum dolor sit amet consectetur. Dis maecenas ultrices gravida etiam faucibus lorem
-                            diam
-                            morbi ac. Augue pretium mattis morbi
-                        </p>
-                    </div>
-                    <div class="bepartner__item-num four">
-                        4
                     </div>
                 </li>
             </ul>
@@ -157,13 +151,13 @@
             <h2 class="title">Стать партнёром</h2>
 
             <div class="enroll-wrapper">
-                <div class="enroll__info">
+                <div class="enroll__info gs_reveal">
                     <h3 class="enroll__info-title">Оставьте свои данные наши менеджеры свяжутся с вами</h3>
                     <div class="enroll__info-img">
                         <img src="images/images/whyus3.png" alt="enroll image">
                     </div>
                 </div>
-                <form class="enroll__form">
+                <form class="enroll__form gs_reveal">
                     <div class="enroll__form-item">
                         <label class="enroll__form-label" for="name">Название вашей компании</label>
                         <input class="enroll__form-input" placeholder="Ваше имя" type="text" name="name" id="name">
@@ -191,7 +185,7 @@
         </div>
     </section>
 
- <section class="whyus">
+    <section id="whyus" class="whyus">
         <h2 class="title">Почему выбирают нас?</h2>
 
         <div class="container">
@@ -282,97 +276,80 @@
         </div>
 
     </section>
-    
-    <section class="feedback">
+
+    <section id="feedback" class="feedback">
         <h2 class="title">Отзывы</h2>
 
         <div class="container">
             <div class="feedback-swiper swiper mySwiperTwo">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="feedback-image">
-                            <img src="images/images/user.png" alt="user photo">
-                        </div>
-                        <h3 class="feedback-name">Иван Кирсанов</h3>
-                        <h4 class="feedback-city">
-                            Краснодар
-                        </h4>
+                        <h3 class="feedback-name">Эля, мама Радмира</h3>
+
                         <h4 class="feedback-quote">
-                            «Лучшую цитату пишите в заголовке»
+                            Спасибо за отличный проект.👍
                         </h4>
                         <p class="feedback-article">
-                            «Вставьте отзыв целиком или часть отзыва клиента. Никогда не выдумывайте отзывы
-                            самостоятельно. Фильшивые отзывы всегда видно. Будьте честны в этом месте»
+                            Сыну очень нравится.🥰
+                            Успехов вам и новых идей.😊
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <div class="feedback-image">
-                            <img src="images/images/user.png" alt="user photo">
-                        </div>
-                        <h3 class="feedback-name">Иван Кирсанов</h3>
-                        <h4 class="feedback-city">
-                            Краснодар
-                        </h4>
+                        <h3 class="feedback-name">Людмила</h3>
+
                         <h4 class="feedback-quote">
-                            «Лучшую цитату пишите в заголовке»
+                            Желаю успехов и процветания!
                         </h4>
                         <p class="feedback-article">
-                            «Вставьте отзыв целиком или часть отзыва клиента. Никогда не выдумывайте отзывы
-                            самостоятельно. Фильшивые отзывы всегда видно. Будьте честны в этом месте»
+                            Благодарю, моему сыну очень нравится на занятиях у вас, он получил действительно те знания
+                            которые я бы даже не знаю как могла бы ему дать!!
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <div class="feedback-image">
-                            <img src="images/images/user.png" alt="user photo">
-                        </div>
-                        <h3 class="feedback-name">Иван Кирсанов</h3>
-                        <h4 class="feedback-city">
-                            Краснодар
-                        </h4>
+                        <h3 class="feedback-name">Динара Рифтаховна</h3>
+
                         <h4 class="feedback-quote">
-                            «Лучшую цитату пишите в заголовке»
+                            Супер команда!
                         </h4>
                         <p class="feedback-article">
-                            «Вставьте отзыв целиком или часть отзыва клиента. Никогда не выдумывайте отзывы
-                            самостоятельно. Фильшивые отзывы всегда видно. Будьте честны в этом месте»
+                            Спасибо за обучение, сыну очень интересно узнавать все новое, что связанно с физикой и
+                            электроникой.
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <div class="feedback-image">
-                            <img src="images/images/user.png" alt="user photo">
-                        </div>
-                        <h3 class="feedback-name">Иван Кирсанов</h3>
-                        <h4 class="feedback-city">
-                            Краснодар
-                        </h4>
+                        <h3 class="feedback-name">Михаил Починский</h3>
                         <h4 class="feedback-quote">
-                            «Лучшую цитату пишите в заголовке»
+                            Спасибо все команде!
                         </h4>
                         <p class="feedback-article">
-                            «Вставьте отзыв целиком или часть отзыва клиента. Никогда не выдумывайте отзывы
-                            самостоятельно. Фильшивые отзывы всегда видно. Будьте честны в этом месте»
+                            Курсы робототехники очень интересные. Сын ходит с удовольствием!
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <div class="feedback-image">
-                            <img src="images/images/user.png" alt="user photo">
-                        </div>
-                        <h3 class="feedback-name">Иван Кирсанов</h3>
-                        <h4 class="feedback-city">
-                            Краснодар
-                        </h4>
+                        <h3 class="feedback-name">Мама Шомуродова</h3>
                         <h4 class="feedback-quote">
-                            «Лучшую цитату пишите в заголовке»
+                            Преподаватели очень отзывчивые!
                         </h4>
                         <p class="feedback-article">
-                            «Вставьте отзыв целиком или часть отзыва клиента. Никогда не выдумывайте отзывы
-                            самостоятельно. Фильшивые отзывы всегда видно. Будьте честны в этом месте»
+                            Очень полезное и перспетивное занятие для детей 21 века. Мой сын закончил весь курс и мы
+                            очень довольны. Сам процесс обучения поставлен очень правильно.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3 class="feedback-name">Тётя Кольчугина</h3>
+                        <h4 class="feedback-quote">
+                            Ещё раз огромное спасибо!
+                        </h4>
+                        <p class="feedback-article">
+                            Сначала я просто записала племянника на один курс и ему понравилось. Он сказал что будет
+                            ходить. Я очень благодарна всей вашей команде за то что вы делаете для наших детей
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <div class="questions">
@@ -455,39 +432,41 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer__contact">
-                <a href="#" class="footer__contact-item">D*****@gmail.com</a>
-                <a href="#" class="footer__contact-item">D*****@gmail.com</a>
-            </div>
             <div class="footer__center">
                 <a href="index.html" class="footer-logo">
                     <img src="images/icons/logo.svg" alt="footer-logo">
                 </a>
                 <ul class="footer__social">
                     <li class="footer__social-item">
-                        <a href="#" class="footer__social-link">
+                        <a href="https://t.me/robot_machines" class="footer__social-link">
                             <img src="images/icons/tg.svg" alt="tg">
                         </a>
                     </li>
                     <li class="footer__social-item">
-                        <a href="#" class="footer__social-link">
+                        <a href="https://www.instagram.com/rm_uz/" class="footer__social-link">
                             <img src="images/icons/insta.svg" alt="insta">
                         </a>
                     </li>
                     <li class="footer__social-item">
-                        <a href="#" class="footer__social-link">
+                        <a href="https://t.me/rmgroup_uz" class="footer__social-link">
                             <img src="images/icons/phone.svg" alt="phone">
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="footer__contact">
-                <a href="#" class="footer__contact-item">+998 91 771 71 25</a>
-                <a href="#" class="footer__contact-item">+998 91 771 71 25</a>
+                <a href="mailto:robotmachines2019@gmail.com"
+                    class="footer__contact-item">robotmachines2019@gmail.com</a>
+                <a href="tel:+998330779770" class="footer__contact-item">+998 33 077 97 70</a>
             </div>
+
+
         </div>
     </footer>
 
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="scripts/index.js"></script>
 </body>

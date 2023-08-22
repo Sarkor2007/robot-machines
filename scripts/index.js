@@ -95,20 +95,20 @@ const filter = document.querySelector('.filter');
 const navListItem = document.querySelectorAll('.nav__list-link');
 const navExit = document.querySelector('.nav__exit-btn');
 
-navBtn.addEventListener('click', () => {
+navBtn?.addEventListener('click', () => {
     navBar.classList.toggle('active');
     filter.classList.toggle('active');
     navOpen.classList.toggle('active');
 })
 
-filter.addEventListener('click', () => {
+filter?.addEventListener('click', () => {
     navBar.classList.remove('active');
     filter.classList.remove('active');
     navOpen.classList.remove('active');
 });
 
 
-navExit.addEventListener('click', () => {
+navExit?.addEventListener('click', () => {
     navBar.classList.remove('active');
     filter.classList.remove('active');
     navOpen.classList.remove('active');
