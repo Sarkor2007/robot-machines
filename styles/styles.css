@@ -590,16 +590,20 @@ html::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     padding: 0 34px;
+    gap: 8px;
 }
 
 .questions__item-header-text {
     color: var(--primary-white);
     font-family: 'Rubik';
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
+    user-select: none;
 }
 
 .questions__item-header-img {
+    min-width: 22px;
+    min-height: 22px;
     width: 22px;
     height: 22px;
     user-select: none;
@@ -633,7 +637,7 @@ html::-webkit-scrollbar-thumb {
 .questions__item-body.active {
     border-top: 1px solid var(--primary-white);
     transition: .4s all;
-    padding: 20px 34px;
+    padding: 20px 34px 30px;
 }
 
 /* ====  footer  ==== */
@@ -1039,8 +1043,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 .partners .swiper-slide img {
-    width: 100%;
-    height: 100%;
+    user-select: none;
+    width: 95%;
+    height: 95%;
     object-fit: contain;
 }
 
@@ -1309,6 +1314,10 @@ html::-webkit-scrollbar-thumb {
     .about-wrapper {
         padding: 30px 30px 45px 30px;
     }
+
+    .questions__item-header-text {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 980px) {
@@ -1449,6 +1458,10 @@ html::-webkit-scrollbar-thumb {
 @media (max-width: 600px) {
     .questions__item-header-text {
         font-size: 20px;
+    }
+
+    .questions__item-body {
+        font-size: 18px;
     }
 
     .questions__item-header {
@@ -1626,6 +1639,25 @@ html::-webkit-scrollbar-thumb {
     .feedback .swiper-slide {
         border-radius: 25px;
     }
+
+    .questions__item-header {
+        height: 75px;
+    }
+
+    .questions__item-header-img {
+        min-width: 18px;
+        min-height: 18px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .questions__item-body.active {
+        padding: 20px 24px 30px;
+    }
+
+    .questions__item-body {
+        padding: 0 24px;
+    }
 }
 
 
@@ -1637,5 +1669,17 @@ html::-webkit-scrollbar-thumb {
 
     .bepartner__list-item {
         padding: 40px 20px 40px 20px;
+    }
+
+    .questions__item-header {
+        padding: 0 16px;
+    }
+
+    .questions__item-header-text {
+        font-size: 16px;
+    }
+
+    .questions__item-body {
+        font-size: 15px;
     }
 }
