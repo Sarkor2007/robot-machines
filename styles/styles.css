@@ -603,6 +603,13 @@ html::-webkit-scrollbar-thumb {
     width: 22px;
     height: 22px;
     user-select: none;
+    transform: rotate(-90deg);
+    transition: .3s all;
+}
+
+.questions__item-header-img.active {
+    transition: .3s all;
+    transform: rotate(0);
 }
 
 .questions__item-header-img img {
@@ -625,7 +632,6 @@ html::-webkit-scrollbar-thumb {
 
 .questions__item-body.active {
     border-top: 1px solid var(--primary-white);
-    min-height: 200px;
     transition: .4s all;
     padding: 20px 34px;
 }
@@ -1482,10 +1488,6 @@ html::-webkit-scrollbar-thumb {
     .bepartner__item-content {
         width: 100%;
     }
-
-    /* .footer__contact:first-child {
-        margin-top: 40px;
-    } */
 }
 
 @media (max-width: 500px) {

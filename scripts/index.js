@@ -1,7 +1,6 @@
 console.log('Welcome')
 
 
-
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -76,13 +75,20 @@ var swiper = new Swiper(".mySwiperThree", {
 });
 
 
+const accordionHead = document.querySelectorAll('.questions__item-header');
+const accordionBody = document.querySelectorAll('.questions__item-body');
+const accordionArrow = document.querySelectorAll('.questions__item-header-img');
 
-const dropdownHead = document.querySelectorAll('.questions__item-header');
-const dropdownBody = document.querySelectorAll('.questions__item-body');
-
-for (let i = 0; i < dropdownHead.length; i++) {
-    dropdownHead[i]?.addEventListener('click', () => {
-        dropdownBody[i].classList.toggle('active');
+for (let i = 0; i < accordionHead.length; i++) {
+    accordionHead[i]?.addEventListener('click', () => {
+        accordionBody[i].classList.toggle('active');
+        accordionArrow[i].classList.toggle('active');
+        if (accordionBody[i].classList.contains('active')) {
+            console.log(accordionBody[i].clientHeight)
+            accordionBody[i].style.minHeight = accordionBody[i].scrollHeight + 40 + 'px';
+        } else {
+            accordionBody[i].style.minHeight = '0';
+        }
     })
 }
 
@@ -115,7 +121,7 @@ navExit?.addEventListener('click', () => {
 });
 
 
-navListItem.forEach(el => {
+navListItem?.forEach(el => {
     el.addEventListener('click', () => {
         navBar.classList.remove('active');
         filter.classList.remove('active');
@@ -159,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
-        hide(elem); 
+        hide(elem);
 
         ScrollTrigger.create({
             trigger: elem,
@@ -170,3 +176,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
