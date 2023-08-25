@@ -190,7 +190,7 @@ gsap.to('progress', {
 });
 
 
-const showAnim = gsap.from('.header .container', {
+const showAnim = gsap.from('.header', {
     yPercent: -100,
     paused: true,
     duration: 0.2

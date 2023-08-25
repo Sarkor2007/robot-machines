@@ -121,14 +121,14 @@ progress::-moz-progress-bar {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.header {
+header {
     height: 116px;
     padding: 15px 0 10px;
 }
 
 
 .header-logo {
-    width: 290px;
+    width: 230px;
     display: inline-block;
 }
 
@@ -136,13 +136,7 @@ progress::-moz-progress-bar {
     width: 100%;
 }
 
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-white);
-    padding-top: 12px;
-    padding-bottom: 5px;
+.header {
     position: fixed;
     z-index: 50;
     width: 100%;
@@ -150,6 +144,15 @@ progress::-moz-progress-bar {
     top: 8px;
     transition: ease 0.3s;
     border-bottom: 1px solid rgba(37, 35, 38, 0.4);
+    padding-top: 12px;
+    padding-bottom: 5px;
+    background-color: var(--primary-white);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header .container--scrolled {
@@ -1472,10 +1475,6 @@ progress::-moz-progress-bar {
 
 
 @media (max-width: 640px) {
-    .header-logo {
-        width: 230px;
-    }
-
     .course__list-link {
         padding: 0 30px;
     }
