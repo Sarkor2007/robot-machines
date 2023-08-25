@@ -308,10 +308,15 @@ html::-webkit-scrollbar-thumb {
     border-radius: 35px;
     background: var(--primary-gray);
     width: calc(50% - 15px);
+}
+
+.course__list-link {
     display: flex;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .course__item-title {
@@ -388,6 +393,7 @@ html::-webkit-scrollbar-thumb {
     border-radius: 25px;
     overflow: hidden;
     margin-top: 6px;
+    background-color: var(--primary-gray);
 }
 
 .whous-image img {
@@ -566,7 +572,7 @@ html::-webkit-scrollbar-thumb {
 
 .questions {
     margin-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .questions__list {
@@ -646,15 +652,24 @@ html::-webkit-scrollbar-thumb {
     margin-top: 100px;
     border-top: 1px solid var(--primary-gray);
     padding-top: 40px;
-    padding-bottom: 130px;
+    padding-bottom: 80px;
 }
 
 .footer .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.footer-logo {
+    width: 295px;
+}
+
+.footer-logo img {
+    width: 100%;
+    object-fit: contain;
 }
 
 .footer__center {
@@ -686,12 +701,13 @@ html::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 }
 
 .footer__contact-item {
     color: var(--primary-gray);
     font-family: 'Rubik';
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 500;
 }
 
@@ -1302,15 +1318,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 1060px) {
-    .footer .container {
-        justify-content: space-evenly;
-        gap: 40px;
-    }
-
-    .footer {
-        padding-bottom: 80px;
-    }
-
     .about-wrapper {
         padding: 30px 30px 45px 30px;
     }
@@ -1320,15 +1327,6 @@ html::-webkit-scrollbar-thumb {
     }
 }
 
-@media (max-width: 980px) {
-    .footer .container {
-        flex-direction: column;
-    }
-
-    .footer__contact {
-        align-items: center;
-    }
-}
 
 @media (max-width: 950px) {
     .whyus__wrapper-item {
@@ -1372,7 +1370,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
-    .course__list-item {
+    .course__list-link {
         padding-right: 40px;
     }
 
@@ -1388,17 +1386,12 @@ html::-webkit-scrollbar-thumb {
         padding: 0 10px;
     }
 
-    .footer .container {
-        justify-content: space-evenly;
-        gap: 45px;
+    .footer {
+        margin-top: 30px
     }
 
     .footer__center {
-        order: -2;
-    }
-
-    .footer {
-        margin-top: 30px
+        gap: 35px;
     }
 
     .enroll__form-item {
@@ -1426,9 +1419,6 @@ html::-webkit-scrollbar-thumb {
         font-size: 28px;
     }
 
-    .footer__contact-item {
-        font-size: 28px;
-    }
 }
 
 
@@ -1438,7 +1428,7 @@ html::-webkit-scrollbar-thumb {
         width: 230px;
     }
 
-    .course__list-item {
+    .course__list-link {
         padding: 0 30px;
     }
 
@@ -1490,6 +1480,20 @@ html::-webkit-scrollbar-thumb {
 
     .footer__contact-item {
         font-size: 20px;
+    }
+
+    .footer-logo {
+        width: 200px;
+    }
+
+    .footer__social-link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer__social {
+        gap: 25px;
     }
 }
 

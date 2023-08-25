@@ -1,4 +1,4 @@
-console.log('Welcome')
+console.log('Welcome');
 
 
 var swiper = new Swiper(".mySwiper", {
@@ -84,8 +84,7 @@ for (let i = 0; i < accordionHead.length; i++) {
         accordionBody[i].classList.toggle('active');
         accordionArrow[i].classList.toggle('active');
         if (accordionBody[i].classList.contains('active')) {
-            console.log(accordionBody[i].clientHeight)
-            accordionBody[i].style.minHeight = accordionBody[i].scrollHeight + 40 + 'px';
+            accordionBody[i].style.minHeight = accordionBody[i].scrollHeight + 50 + 'px';
         } else {
             accordionBody[i].style.minHeight = '0';
         }
