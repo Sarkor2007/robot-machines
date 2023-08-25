@@ -54,6 +54,10 @@ body {
     min-width: 360px;
 }
 
+body.active {
+    overflow-y: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -69,6 +73,34 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
     background-color: rgb(211, 208, 208);
 }
+
+progress {
+    position: fixed;
+    z-index: 51;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border: none;
+    background: var(--primary-gray);
+}
+
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+progress::-webkit-progress-value {
+    background: var(--primary-yellow);
+    background-attachment: fixed;
+}
+
+progress::-moz-progress-bar {
+    background: var(--primary-yellow);
+    background-attachment: fixed;
+}
+
 
 .container {
     max-width: 1630px;
@@ -90,9 +122,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 .header {
-    padding: 25px 0;
+    height: 116px;
+    padding: 15px 0 10px;
     border-bottom: 1px solid rgba(37, 35, 38, 0.4);
 }
+
 
 .header-logo {
     width: 290px;
@@ -107,7 +141,21 @@ html::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--primary-white);
+    padding-top: 12px;
+    padding-bottom: 5px;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    left: 0;
+    top: 8px;
+    transition: ease 0.3s;
 }
+
+.header .container--scrolled {
+    height: 40px;
+}
+
 
 .nav.active {
     left: 0;
@@ -1075,7 +1123,7 @@ html::-webkit-scrollbar-thumb {
 .bepartner__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 30px;
     margin-top: 50px;
 }
@@ -1144,12 +1192,12 @@ html::-webkit-scrollbar-thumb {
         left: -100%;
         top: 0;
         transition: .5s all;
-        height: 100%;
+        height: 100vh;
         max-width: 350px;
         width: 100%;
         background-color: var(--primary-white);
         border-right: 1px solid var(--primary-black);
-        z-index: 5;
+        z-index: 1001;
     }
 
     .nav__list {

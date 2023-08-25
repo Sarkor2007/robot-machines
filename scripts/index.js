@@ -96,6 +96,7 @@ for (let i = 0; i < accordionHead.length; i++) {
 const navBtn = document.querySelector('.nav__open');
 const navBar = document.querySelector('.nav');
 const navOpen = document.querySelector('.nav__open-btn');
+const body = document.querySelector('body');
 const filter = document.querySelector('.filter');
 const navListItem = document.querySelectorAll('.nav__list-link');
 const navExit = document.querySelector('.nav__exit-btn');
@@ -104,12 +105,14 @@ navBtn?.addEventListener('click', () => {
     navBar.classList.toggle('active');
     filter.classList.toggle('active');
     navOpen.classList.toggle('active');
+    body.classList.toggle('active');
 })
 
 filter?.addEventListener('click', () => {
     navBar.classList.remove('active');
     filter.classList.remove('active');
     navOpen.classList.remove('active');
+    body.classList.remove('active');
 });
 
 
@@ -117,6 +120,7 @@ navExit?.addEventListener('click', () => {
     navBar.classList.remove('active');
     filter.classList.remove('active');
     navOpen.classList.remove('active');
+    body.classList.remove('active');
 });
 
 
@@ -125,6 +129,7 @@ navListItem?.forEach(el => {
         navBar.classList.remove('active');
         filter.classList.remove('active');
         navOpen.classList.remove('active');
+        body.classList.remove('active');
     })
 });
 
@@ -177,3 +182,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+    value: 100,
+    ease: 'none',
+    scrollTrigger: { scrub: 0.3 }
+});
+
+
+const showAnim = gsap.from('.header .container', {
+    yPercent: -100,
+    paused: true,
+    duration: 0.2
+}).progress(1);
+
+ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    }
+});
