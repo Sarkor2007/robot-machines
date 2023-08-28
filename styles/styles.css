@@ -171,7 +171,7 @@ header {
 .nav__list {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 45px;
 }
 
 .nav__list-link {
@@ -786,7 +786,6 @@ header {
 .enroll__info {
     min-width: 500px;
     width: 500px;
-    height: 100%;
     padding: 50px 40px 20px;
     display: flex;
     flex-direction: column;
@@ -866,6 +865,10 @@ header {
     font-weight: 400;
     cursor: pointer;
     display: block;
+}
+
+.enroll__form-text p {
+    display: inline;
 }
 
 .enroll__form-text span {

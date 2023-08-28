@@ -90,7 +90,6 @@ for (let i = 0; i < accordionHead.length; i++) {
 }
 
 
-
 const navBtn = document.querySelector('.nav__open');
 const navBar = document.querySelector('.nav');
 const navOpen = document.querySelector('.nav__open-btn');
@@ -132,10 +131,6 @@ navListItem?.forEach(el => {
 });
 
 
-
-
-
-
 function animateFrom(elem, direction) {
     direction = direction || 1;
     var x = 0,
@@ -171,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ScrollTrigger.create({
             trigger: elem,
-            // markers: true,
             onEnter: function () { animateFrom(elem) },
             onEnterBack: function () { animateFrom(elem, -1) },
             onLeave: function () { hide(elem) }
@@ -209,9 +203,17 @@ let language = JSON.parse(localStorage.getItem('lang')) || 'uz';
 async function loadTranslations(el) {
     const response = await fetch(`scripts/lang/${el}.json`);
     let currentLang = await response.json();
-    for (const key in currentLang) {
+    for (const key in currentLang.textContent) {
         if (document.getElementById(`${key}`)) {
-            document.getElementById(`${key}`).textContent = currentLang[key];
+            document.getElementById(`${key}`).innerHTML = currentLang.textContent[key];
+            // if (currentLang.textContent[key].match(/\bspan\b/g)) {
+            //     console.log(currentLang.textContent[key]);
+            // }
+        }
+    }
+    for (const key in currentLang.placeholder) {
+        if (document.getElementById(`${key}`)) {
+            document.getElementById(`${key}`).placeholder = currentLang.placeholder[key];
         }
     }
 }
@@ -220,7 +222,7 @@ loadTranslations(language);
 
 const lang = document.querySelector('.contact-lang');
 
-lang.addEventListener('click', () => {
+lang?.addEventListener('click', () => {
     if (language === 'uz') {
         language = 'ru';
     } else {
