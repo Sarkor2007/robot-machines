@@ -110,7 +110,7 @@ progress::-moz-progress-bar {
 }
 
 .filter.active {
-    z-index: 4;
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
@@ -159,6 +159,9 @@ header {
     height: 40px;
 }
 
+.nav-phone {
+    display: none;
+}
 
 .nav.active {
     left: 0;
@@ -1160,6 +1163,7 @@ header {
 
 .bepartner__item-content {
     width: calc(100% - 110px);
+    height: 100%;
 }
 
 .bepartner__item-num {
@@ -1201,6 +1205,11 @@ header {
         background-color: var(--primary-white);
         border-right: 1px solid var(--primary-black);
         z-index: 1001;
+        display: none;
+    }
+
+    .nav-phone {
+        display: block;
     }
 
     .nav__list {
@@ -1221,6 +1230,14 @@ header {
 
     .nav__exit {
         display: flex;
+    }
+
+    .bepartner__list {
+        flex-direction: column;
+    }
+
+    .bepartner__list-item {
+        width: 100%;
     }
 }
 
@@ -1357,14 +1374,6 @@ header {
 
     .enroll__form-item {
         width: calc(50% - 25px);
-    }
-
-    .bepartner__list {
-        flex-direction: column;
-    }
-
-    .bepartner__list-item {
-        width: 100%;
     }
 }
 

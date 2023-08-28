@@ -1,5 +1,3 @@
-console.log('Welcome');
-
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -203,3 +201,31 @@ ScrollTrigger.create({
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
 });
+
+
+let language = JSON.parse(localStorage.getItem('lang')) || 'uz';
+
+
+async function loadTranslations(el) {
+    const response = await fetch(`scripts/lang/${el}.json`);
+    let currentLang = await response.json();
+    for (const key in currentLang) {
+        if (document.getElementById(`${key}`)) {
+            document.getElementById(`${key}`).textContent = currentLang[key];
+        }
+    }
+}
+
+loadTranslations(language);
+
+const lang = document.querySelector('.contact-lang');
+
+lang.addEventListener('click', () => {
+    if (language === 'uz') {
+        language = 'ru';
+    } else {
+        language = 'uz';
+    }
+    loadTranslations(language);
+    localStorage.setItem('lang', JSON.stringify(language));
+})
