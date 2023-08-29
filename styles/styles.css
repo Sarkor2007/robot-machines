@@ -1045,14 +1045,6 @@ header {
     font-weight: 600;
 }
 
-.vacancy__item-subtitle {
-    color: var(--primary-gray);
-    font-family: "Rubik";
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: 8px;
-}
-
 .vacancy__item-text {
     margin-top: 20px;
     border-top: 1px solid var(--primary-gray);
@@ -1070,7 +1062,7 @@ header {
     padding: 0 20px;
 }
 
-.vacancy__item-btn button {
+.vacancy__item-btn a {
     border-radius: 25px;
     border: 2px solid var(--primary-gray);
     width: 330px;
@@ -1534,6 +1526,10 @@ header {
     }
 
     .feedback-swiper {
+        margin-top: 25px;
+    }
+
+    .bepartner__list {
         margin-top: 25px;
     }
 
