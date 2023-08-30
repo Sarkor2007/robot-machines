@@ -145,11 +145,11 @@ function animateFrom(elem, direction) {
     elem.style.transform = "translate(" + x + "px, " + y + "px)";
     elem.style.opacity = "0";
     gsap.fromTo(elem, { x: x, y: y, autoAlpha: 0 }, {
-        duration: 2,
+        duration: 1.2,
         x: 0,
         y: 0,
         autoAlpha: 1,
-        ease: "expo",
+        ease: "easeInOut",
         overwrite: "auto"
     });
 }
@@ -167,11 +167,12 @@ document.addEventListener("DOMContentLoaded", function () {
         ScrollTrigger.create({
             trigger: elem,
             onEnter: function () { animateFrom(elem) },
-            onEnterBack: function () { animateFrom(elem, -1) },
-            onLeave: function () { hide(elem) }
+            // onEnterBack: function () { animateFrom(elem, -1) },
+            // onLeave: function () { hide(elem) }
         });
     });
 });
+
 
 
 gsap.registerPlugin(ScrollTrigger);
