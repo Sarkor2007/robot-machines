@@ -1,4 +1,3 @@
-
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -199,27 +198,77 @@ ScrollTrigger.create({
 
 
 let language = JSON.parse(localStorage.getItem('lang')) || 'uz';
+const article = document.querySelectorAll('.about__list-text');
+const articleText = document.querySelectorAll('.about__list-text p');
+const articleBtn = document.querySelectorAll('.about__list-text span');
 
 
 async function loadTranslations(el) {
     const response = await fetch(`scripts/lang/${el}.json`);
     let currentLang = await response.json();
-    for (const key in currentLang.textContent) {
-        if (document.getElementById(`${key}`)) {
-            document.getElementById(`${key}`).innerHTML = currentLang.textContent[key];
-            // if (currentLang.textContent[key].match(/\bspan\b/g)) {
-            //     console.log(currentLang.textContent[key]);
-            // }
+    function setLang() {
+        for (const key in currentLang.textContent) {
+            if (document.getElementById(`${key}`)) {
+                document.getElementById(`${key}`).innerHTML = currentLang.textContent[key];
+            }
+        }
+        for (const key in currentLang.placeholder) {
+            if (document.getElementById(`${key}`)) {
+                document.getElementById(`${key}`).placeholder = currentLang.placeholder[key];
+            }
         }
     }
-    for (const key in currentLang.placeholder) {
-        if (document.getElementById(`${key}`)) {
-            document.getElementById(`${key}`).placeholder = currentLang.placeholder[key];
+    await setLang()
+
+    for (let i = 0; i < articleText.length; i++) {
+        let el = articleText[i]
+        if (el.scrollHeight > el.clientHeight) {
+            articleBtn[i].classList.add('about__list-btn')
         }
     }
 }
 
+
+let articleResponsive = '72px'
+
+if (window.matchMedia('(max-width: 1270px)').matches && window.matchMedia('(min-width: 501px)').matches) {
+    articleResponsive = '60px'
+} else if (window.matchMedia('(max-width: 500px)').matches && window.matchMedia('(min-width: 401px)').matches) {
+    articleResponsive = '52px'
+} else if (window.matchMedia('(max-width: 400px)').matches) {
+    articleResponsive = '44px'
+}
+
+for (let i = 0; i < articleBtn.length; i++) {
+    articleBtn[i]?.addEventListener('click', () => {
+        articleText[i].classList.toggle('active');
+        if (articleText[i].classList.contains('active')) {
+            articleText[i].style.maxHeight = `${articleText[i].scrollHeight}px`;
+        } else {
+            articleText[i].style.maxHeight = articleResponsive
+        }
+        articleBtn[i].classList.toggle('active');
+        if (articleBtn[i].classList.contains('active')) {
+            articleBtn[i].innerHTML = 'меньше'
+        } else {
+            articleBtn[i].innerHTML = 'ещё'
+        }
+    })
+}
+
+function setWeclomeBg(lang) {
+    if (document.querySelector('.welcome-img')) {
+        if (lang == 'uz') {
+            document.querySelector('.welcome-img').src = 'images/images/welcome-uz.webp';
+        } else {
+            document.querySelector('.welcome-img').src = 'images/images/welcome.webp';
+        }
+    }
+}
+
+
 loadTranslations(language);
+setWeclomeBg(language)
 
 const lang = document.querySelector('.contact-lang');
 
@@ -229,6 +278,19 @@ lang?.addEventListener('click', () => {
     } else {
         language = 'uz';
     }
+    setWeclomeBg(language)
     loadTranslations(language);
     localStorage.setItem('lang', JSON.stringify(language));
 })
+
+
+// for (let j = 0; j < articleText.length; j++) {
+//     articleText[j].classList.remove('active');
+//     articleBtn[j].classList.remove('active');
+//     if (articleText[j].classList.contains('active')) {
+//         articleText[j].style.maxHeight = `${articleText[j].scrollHeight}px`;
+//     } else {
+//         articleText[j].style.maxHeight = '72px'
+//     }
+// }
+

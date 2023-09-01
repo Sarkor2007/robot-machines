@@ -332,7 +332,7 @@ header {
     padding-bottom: 20px;
 }
 
-.welcome img {
+.welcome-img {
     width: 100%;
     object-fit: contain;
 }
@@ -959,9 +959,29 @@ header {
     border-radius: 35px;
     background: var(--primary-gray);
     padding: 30px 40px 45px 50px;
+}
+
+.about-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.about-schedule {
+    margin-top: 30px;
+    border-top: 1px solid var(--primary-yellow);
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 44px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    color: var(--primary-white);
+    white-space: pre-wrap;
+}
+
+.about-schedule span{
+    font-weight: 700;
+    font-family: 'Akzidenz';
 }
 
 .about-title {
@@ -971,12 +991,31 @@ header {
     font-weight: 700;
 }
 
-.about__list-text {
+.about__list-text p {
     color: var(--primary-white);
     font-family: 'Rubik';
     font-size: 25px;
     font-weight: 700;
-    line-height: 36px
+    line-height: 36px;
+    max-height: 72px;
+    min-height: 71px;
+    height: auto;
+    transition: .5s all;
+    overflow-y: hidden;
+}
+
+.about__list-text span {
+    display: none;
+    color: var(--primary-white);
+    font-family: 'Rubik';
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.about__list-btn {
+    display: inline !important;
 }
 
 .about__list-item {
@@ -1053,6 +1092,15 @@ header {
     font-family: 'Montserrat';
     font-size: 15px;
     font-weight: 400;
+    line-height: 24px;
+    white-space: pre-wrap;
+}
+
+.vacancy__item-text span {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Akzidenz';
+    line-height: 32px;
 }
 
 .vacancy__item-btn {
@@ -1283,9 +1331,11 @@ header {
         width: calc(50% - 10px);
     }
 
-    .about__list-text {
+    .about__list-text p {
         font-size: 20px;
         line-height: 30px;
+        max-height: 60px;
+        min-height: 59px;
     }
 }
 
@@ -1470,10 +1520,17 @@ header {
         margin-top: 30px;
     }
 
+    .course {
+        margin-top: 25px;
+    }
+
     .vacancy__item-title {
         font-size: 28px;
     }
-
+    .about-schedule {
+        font-size: 20px;
+        line-height: 32px;
+    }
 }
 
 
@@ -1576,10 +1633,6 @@ header {
         height: 60px;
     }
 
-    .welcome {
-        margin-top: 20px;
-    }
-
     .course__item-article {
         gap: 16px;
     }
@@ -1625,9 +1678,15 @@ header {
         border-radius: 25px;
     }
 
-    .about__list-text {
+    .about__list-text p {
         font-size: 16px;
         line-height: 26px;
+        max-height: 52px;
+        min-height: 51px;
+    }
+
+    .about__list-text span {
+        font-size: 14px;
     }
 
     .about__list-img {
@@ -1717,13 +1776,23 @@ header {
     .questions__item-body {
         padding: 0 24px;
     }
+    .about-schedule {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 
 @media (max-width: 400px) {
-    .about__list-text {
+    .about__list-text p {
         font-size: 14px;
         line-height: 22px;
+        max-height: 44px;
+        min-height: 43px;
+    }
+
+    .about__list-text span {
+        font-size: 12px;
     }
 
     .bepartner__list-item {
