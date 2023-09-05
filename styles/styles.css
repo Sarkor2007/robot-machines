@@ -398,6 +398,12 @@ header {
 
 .course__item-img {
     width: 184px;
+    height: 184px;
+    position: relative;
+}
+
+.course__item-box {
+    width: 184px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -405,8 +411,53 @@ header {
 
 .course__item-img img {
     width: 100%;
-    height: 184px;
+    height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.course__item-img::after,
+.whyus__item-img::after,
+.enroll__info-img::after,
+.about-img::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s all;
+}
+
+.course__list-item:hover .course__item-img::after {
+    background-color: var(--primary-yellow);
+    box-shadow: 0px 0px 120px 60px var(--primary-yellow);
+    transition: .2s all;
+}
+
+.whyus__item:hover .whyus__item-img::after {
+    background-color: var(--primary-yellow);
+    box-shadow: 0px 0px 200px 120px var(--primary-yellow);
+    transition: .2s all;
+}
+
+.whyus__item:hover {
+    outline: 10px solid var(--primary-yellow);
+    transition: .3s all;
+}
+
+.enroll__info:hover .enroll__info-img::after {
+    background-color: var(--primary-yellow);
+    box-shadow: 0px 0px 120px 70px var(--primary-yellow);
+    transition: .2s all;
+}
+
+.about-box:hover .about-img::after {
+    background-color: var(--primary-yellow);
+    box-shadow: 0px 0px 250px 150px var(--primary-yellow);
+    transition: .2s all;
 }
 
 /* ====  whous  ==== */
@@ -508,6 +559,7 @@ header {
     width: 50%;
     background: var(--primary-gray);
     padding: 40px 55px;
+    transition: .3s all;
 }
 
 .whyus__item-content {
@@ -547,6 +599,8 @@ header {
 
 .whyus__item-img img {
     width: 100%;
+    position: relative;
+    z-index: 1;
     object-fit: contain;
 }
 
@@ -799,17 +853,22 @@ header {
     font-family: 'Akzidenz';
     font-size: 25px;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 .enroll__info-img {
     width: 220px;
     height: 200px;
+    position: relative;
 }
 
 .enroll__info-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 .enroll__info,
@@ -977,11 +1036,13 @@ header {
     font-family: 'Roboto';
     color: var(--primary-white);
     white-space: pre-wrap;
+    font-style: italic;
 }
 
-.about-schedule span{
+.about-schedule span {
     font-weight: 700;
     font-family: 'Akzidenz';
+    color: var(--primary-yellow);
 }
 
 .about-title {
@@ -1047,10 +1108,13 @@ header {
 
 .about-img {
     max-width: 550px;
+    position: relative;
 }
 
 .about-img img {
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 /* ====  vacancy   ===== */
@@ -1070,11 +1134,13 @@ header {
 .vacancy__list-item {
     border-radius: 35px;
     border: 1px solid var(--primary-black);
-    padding: 30px 0 20px;
+    padding: 0 0 20px;
+    overflow: hidden;
 }
 
 .vacancy__item-head {
-    padding: 0 20px;
+    background-color: var(--primary-yellow);
+    padding: 30px 20px 20px 20px;
 }
 
 .vacancy__item-title {
@@ -1085,18 +1151,19 @@ header {
 }
 
 .vacancy__item-text {
-    margin-top: 20px;
     border-top: 1px solid var(--primary-gray);
     padding: 15px 45px 0 20px;
     color: var(--primary-gray);
-    font-family: 'Montserrat';
+    font-family: 'Rubik';
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
     white-space: pre-wrap;
+    font-style: italic;
 }
 
 .vacancy__item-text span {
+    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     font-family: 'Akzidenz';
@@ -1127,7 +1194,7 @@ header {
     transition: .2s all;
 }
 
-.vacancy__item-btn button:hover {
+.vacancy__item-btn a:hover {
     color: var(--primary-white);
     background-color: var(--primary-gray);
     transition: .3s all;
@@ -1527,6 +1594,7 @@ header {
     .vacancy__item-title {
         font-size: 28px;
     }
+
     .about-schedule {
         font-size: 20px;
         line-height: 32px;
@@ -1776,6 +1844,7 @@ header {
     .questions__item-body {
         padding: 0 24px;
     }
+
     .about-schedule {
         font-size: 16px;
         line-height: 24px;

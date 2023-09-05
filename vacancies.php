@@ -197,7 +197,7 @@
         </div>
     </section>
 
-    <section class="course">
+ <section class="course">
         <h2 id="ourCoursesTitle" class="title">Наши курсы</h2>
         <div class="container">
             <ul class="course__list">
@@ -210,8 +210,10 @@
                                 подкреплением полученных знаний с помощью сборки собственного робота и его подготовки к
                                 грандиозному робо-бою!</p>
                         </div>
-                        <div class="course__item-img">
-                            <img src="images/images/courses.webp" alt="course item image">
+                        <div class="course__item-box">
+                            <div class="course__item-img">
+                                <img src="images/images/courses.webp" alt="course item image">
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -225,8 +227,10 @@
                                 заключительный этап по созданию своего полноценного сайта!
                             </p>
                         </div>
-                        <div class="course__item-img">
-                            <img src="images/images/courses2.webp" alt="course item image">
+                        <div class="course__item-box">
+                            <div class="course__item-img">
+                                <img src="images/images/courses2.webp" alt="course item image">
+                            </div>
                         </div>
                     </a>
                 </li>

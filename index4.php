@@ -159,6 +159,7 @@
                     </div>
                 </div>
                 <pre id="itSchedule" class="about-schedule"> </pre>
+                <pre id="coursePriceIt" class="about-schedule"></pre>
             </div>
         </div>
     </section>

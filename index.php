@@ -121,8 +121,10 @@
                                 подкреплением полученных знаний с помощью сборки собственного робота и его подготовки к
                                 грандиозному робо-бою!</p>
                         </div>
-                        <div class="course__item-img">
-                            <img src="images/images/courses.webp" alt="course item image">
+                        <div class="course__item-box">
+                            <div class="course__item-img">
+                                <img src="images/images/courses.webp" alt="course item image">
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -136,8 +138,10 @@
                                 заключительный этап по созданию своего полноценного сайта!
                             </p>
                         </div>
-                        <div class="course__item-img">
-                            <img src="images/images/courses2.webp" alt="course item image">
+                        <div class="course__item-box">
+                            <div class="course__item-img">
+                                <img src="images/images/courses2.webp" alt="course item image">
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -320,63 +324,63 @@
             <div class="feedback-swiper swiper mySwiperTwo">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <h3 class="feedback-name">Эля, мама Радмира</h3>
+                        <h3 id="feedbackNameOne" class="feedback-name">Эля, мама Радмира</h3>
 
-                        <h4 class="feedback-quote">
+                        <h4 id="feedbackQuoteOne" class="feedback-quote">
                             Спасибо за отличный проект.👍
                         </h4>
-                        <p class="feedback-article">
+                        <p id="feedbackArticleOne" class="feedback-article">
                             Сыну очень нравится.🥰
                             Успехов вам и новых идей.😊
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <h3 class="feedback-name">Людмила</h3>
+                        <h3 id="feedbackNameTwo" class="feedback-name">Людмила</h3>
 
-                        <h4 class="feedback-quote">
+                        <h4 id="feedbackQuoteTwo" class="feedback-quote">
                             Желаю успехов и процветания!
                         </h4>
-                        <p class="feedback-article">
+                        <p id="feedbackArticleTwo" class="feedback-article">
                             Благодарю, моему сыну очень нравится на занятиях у вас, он получил действительно те знания
                             которые я бы даже не знаю как могла бы ему дать!!
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <h3 class="feedback-name">Динара Рифтаховна</h3>
+                        <h3 id="feedbackNameThree" class="feedback-name">Динара Рифтаховна</h3>
 
-                        <h4 class="feedback-quote">
+                        <h4 id="feedbackQuoteThree" class="feedback-quote">
                             Супер команда!
                         </h4>
-                        <p class="feedback-article">
+                        <p id="feedbackArticleThree" class="feedback-article">
                             Спасибо за обучение, сыну очень интересно узнавать все новое, что связанно с физикой и
                             электроникой.
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <h3 class="feedback-name">Михаил Починский</h3>
-                        <h4 class="feedback-quote">
+                        <h3 id="feedbackNameFour" class="feedback-name">Михаил Починский</h3>
+                        <h4 id="feedbackQuoteFour" class="feedback-quote">
                             Спасибо все команде!
                         </h4>
-                        <p class="feedback-article">
+                        <p id="feedbackArticleFour" class="feedback-article">
                             Курсы робототехники очень интересные. Сын ходит с удовольствием!
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <h3 class="feedback-name">Мама Шомуродова</h3>
-                        <h4 class="feedback-quote">
+                        <h3 id="feedbackNameFive" class="feedback-name">Мама Шомуродова</h3>
+                        <h4 id="feedbackQuoteFive" class="feedback-quote">
                             Преподаватели очень отзывчивые!
                         </h4>
-                        <p class="feedback-article">
+                        <p id="feedbackArticleFive" class="feedback-article">
                             Очень полезное и перспетивное занятие для детей 21 века. Мой сын закончил весь курс и мы
                             очень довольны. Сам процесс обучения поставлен очень правильно.
                         </p>
                     </div>
                     <div class="swiper-slide">
-                        <h3 class="feedback-name">Тётя Кольчугина</h3>
-                        <h4 class="feedback-quote">
+                        <h3 id="feedbackNameSix" class="feedback-name">Тётя Кольчугина</h3>
+                        <h4 id="feedbackQuoteSix" class="feedback-quote">
                             Ещё раз огромное спасибо!
                         </h4>
-                        <p class="feedback-article">
+                        <p id="feedbackArticleSix" class="feedback-article">
                             Сначала я просто записала племянника на один курс и ему понравилось. Он сказал что будет
                             ходить. Я очень благодарна всей вашей команде за то что вы делаете для наших детей
                         </p>
