@@ -109,46 +109,83 @@
             <ul class="vacancy__list">
                 <li class="vacancy__list-item gs_reveal gs_reveal_fromLeft">
                     <div class="vacancy__item-head">
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
                         <h3 id="vacancyTitleOne" class="vacancy__item-title">Преподаватель в частные школы</h3>
                     </div>
 
                     <pre id="vacancyArticleOne" class="vacancy__item-text"></pre>
 
-                    <div class="vacancy__item-btn">
-                        <a href="#enrollVacancy" id="vacancyButtonOne">Откликнуться</a>
+                    <div class="vacancy__animate">
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <pre id="vacancySubArticleOne" class="vacancy__item-text vacancy__animate-text"></pre>
+                        <div class="vacancy__item-btn">
+                            <a href="#enrollVacancy" id="vacancyButtonOne">Откликнуться</a>
+                        </div>
                     </div>
+
                 </li>
                 <li class="vacancy__list-item gs_reveal gs_reveal_fromRight">
                     <div class="vacancy__item-head">
-                        <h3 id="vacancyTitleTwo" class="vacancy__item-title">Преподаватель в клуб RM</h3>
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <h3 id="vacancyTitleTwo" class="vacancy__item-title">Преподаватель в частные школы</h3>
                     </div>
 
                     <pre id="vacancyArticleTwo" class="vacancy__item-text"></pre>
 
-                    <div class="vacancy__item-btn">
-                        <a href="#enrollVacancy" id="vacancyButtonTwo">Откликнуться</a>
+                    <div class="vacancy__animate">
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <pre id="vacancySubArticleTwo" class="vacancy__item-text vacancy__animate-text"></pre>
+                        <div class="vacancy__item-btn">
+                            <a href="#enrollVacancy" id="vacancyButtonOne">Откликнуться</a>
+                        </div>
                     </div>
                 </li>
                 <li class="vacancy__list-item gs_reveal gs_reveal_fromLeft">
                     <div class="vacancy__item-head">
-                        <h3 id="vacancyTitleThree" class="vacancy__item-title">Администратор в клуб RM</h3>
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <h3 id="vacancyTitleThree" class="vacancy__item-title">Преподаватель в частные школы</h3>
                     </div>
 
                     <pre id="vacancyArticleThree" class="vacancy__item-text"></pre>
 
-                    <div class="vacancy__item-btn">
-                        <a href="#enrollVacancy" id="vacancyButtonThree">Откликнуться</a>
+                    <div class="vacancy__animate">
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <pre id="vacancySubArticleThree" class="vacancy__item-text vacancy__animate-text"></pre>
+                        <div class="vacancy__item-btn">
+                            <a href="#enrollVacancy" id="vacancyButtonOne">Откликнуться</a>
+                        </div>
                     </div>
                 </li>
                 <li class="vacancy__list-item gs_reveal gs_reveal_fromRight">
                     <div class="vacancy__item-head">
-                        <h3 id="vacancyTitleFour" class="vacancy__item-title">Помощник учителя (support)</h3>
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <h3 id="vacancyTitleFour" class="vacancy__item-title">Преподаватель в частные школы</h3>
                     </div>
 
                     <pre id="vacancyArticleFour" class="vacancy__item-text"></pre>
 
-                    <div class="vacancy__item-btn">
-                        <a href="#enrollVacancy" id="vacancyButtonFour">Откликнуться</a>
+                    <div class="vacancy__animate">
+                        <div class="vacancy__item-img">
+                            <img src="images/icons/person.svg" alt="person image">
+                        </div>
+                        <pre id="vacancySubArticleFour" class="vacancy__item-text vacancy__animate-text"></pre>
+                        <div class="vacancy__item-btn">
+                            <a href="#enrollVacancy" id="vacancyButtonOne">Откликнуться</a>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -197,7 +234,7 @@
         </div>
     </section>
 
- <section class="course">
+    <section class="course">
         <h2 id="ourCoursesTitle" class="title">Наши курсы</h2>
         <div class="container">
             <ul class="course__list">

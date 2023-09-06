@@ -362,6 +362,7 @@ header {
     border-radius: 35px;
     background: var(--primary-gray);
     width: calc(50% - 15px);
+    transition: .3s all;
 }
 
 .course__list-link {
@@ -431,33 +432,37 @@ header {
     transition: .2s all;
 }
 
-.course__list-item:hover .course__item-img::after {
-    background-color: var(--primary-yellow);
-    box-shadow: 0px 0px 120px 60px var(--primary-yellow);
-    transition: .2s all;
-}
+@media (min-width: 1024px) {
+    .course__list-item:hover .course__item-img::after {
+        background-color: var(--primary-yellow);
+        box-shadow: 0px 0px 120px 60px var(--primary-yellow);
+        transition: .2s all;
+    }
 
-.whyus__item:hover .whyus__item-img::after {
-    background-color: var(--primary-yellow);
-    box-shadow: 0px 0px 200px 120px var(--primary-yellow);
-    transition: .2s all;
-}
+    .whyus__item:hover .whyus__item-img::after {
+        background-color: var(--primary-yellow);
+        box-shadow: 0px 0px 200px 120px var(--primary-yellow);
+        transition: .2s all;
+    }
 
-.whyus__item:hover {
-    outline: 10px solid var(--primary-yellow);
-    transition: .3s all;
-}
+    .whyus__item:hover,
+    .course__list-item:hover,
+    .enroll__info:hover {
+        outline: 10px solid var(--primary-yellow);
+        transition: .3s all;
+    }
 
-.enroll__info:hover .enroll__info-img::after {
-    background-color: var(--primary-yellow);
-    box-shadow: 0px 0px 120px 70px var(--primary-yellow);
-    transition: .2s all;
-}
+    .enroll__info:hover .enroll__info-img::after {
+        background-color: var(--primary-yellow);
+        box-shadow: 0px 0px 120px 70px var(--primary-yellow);
+        transition: .2s all;
+    }
 
-.about-box:hover .about-img::after {
-    background-color: var(--primary-yellow);
-    box-shadow: 0px 0px 250px 150px var(--primary-yellow);
-    transition: .2s all;
+    .about-box:hover .about-img::after {
+        background-color: var(--primary-yellow);
+        box-shadow: 0px 0px 250px 150px var(--primary-yellow);
+        transition: .2s all;
+    }
 }
 
 /* ====  whous  ==== */
@@ -844,6 +849,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    transition: .3s all;
     align-items: center;
 }
 
@@ -1127,31 +1133,81 @@ header {
 .vacancy__list {
     margin-top: 50px;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .vacancy__list-item {
     border-radius: 35px;
     border: 1px solid var(--primary-black);
-    padding: 0 0 20px;
+    padding: 0 0 35px;
     overflow: hidden;
+    width: calc(50% - 10px);
+    position: relative;
+    height: inherit;
+}
+
+.vacancy__animate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 0 30px;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: .3s all;
+    transition-delay: .2s;
+}
+
+.vacancy__animate-text {
+    width: 100%;
+    padding-top: 40px;
+    height: calc(100% - 70px - 54px);
+    border-top: 1px solid var(--primary-gray);
+}
+
+.vacancy__list-item:hover .vacancy__animate {
+    transform: translateY(0);
+    transition: .4s all;
 }
 
 .vacancy__item-head {
     background-color: var(--primary-yellow);
     padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--primary-gray);
+}
+
+.vacancy__animate .vacancy__item-img {
+    margin-bottom: 15px;
+}
+
+.vacancy__item-img {
+    width: 40px;
+    height: 40px;
+}
+
+.vacancy__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .vacancy__item-title {
     color: var(--primary-gray);
     font-family: 'Rubik';
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 600;
 }
 
 .vacancy__item-text {
-    border-top: 1px solid var(--primary-gray);
     padding: 15px 45px 0 20px;
     color: var(--primary-gray);
     font-family: 'Rubik';
@@ -1160,6 +1216,10 @@ header {
     line-height: 24px;
     white-space: pre-wrap;
     font-style: italic;
+}
+
+.vacancy__list-item>.vacancy__item-text {
+    min-height: 290px;
 }
 
 .vacancy__item-text span {
@@ -1173,14 +1233,16 @@ header {
 .vacancy__item-btn {
     margin-top: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 0 20px;
+    width: 100%;
 }
 
 .vacancy__item-btn a {
     border-radius: 25px;
     border: 2px solid var(--primary-gray);
-    width: 330px;
+    max-width: 330px;
+    width: 100%;
     height: 54px;
     display: flex;
     justify-content: center;
@@ -1487,6 +1549,10 @@ header {
     .enroll__form-item {
         width: calc(50% - 25px);
     }
+
+    .vacancy__item-title {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 1060px) {
@@ -1523,6 +1589,10 @@ header {
         margin: auto;
         margin-top: 50px;
     }
+
+    .vacancy__item-title {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1538,6 +1608,20 @@ header {
 
     .vacancy__list {
         margin-top: 30px
+    }
+
+    .vacancy__list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .vacancy__list-item {
+        width: 100%;
+    }
+
+    .vacancy__item-title {
+        font-size: 24px;
+        text-align: center;
     }
 }
 
@@ -1589,10 +1673,6 @@ header {
 
     .course {
         margin-top: 25px;
-    }
-
-    .vacancy__item-title {
-        font-size: 28px;
     }
 
     .about-schedule {
@@ -1790,6 +1870,10 @@ header {
 
     .vacancy__list-item {
         border-radius: 20px;
+    }
+
+    .vacancy__item-title {
+        font-size: 22px;
     }
 
     .vacancy__item-btn button {
