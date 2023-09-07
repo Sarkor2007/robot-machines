@@ -197,7 +197,7 @@ ScrollTrigger.create({
 });
 
 
-let language = JSON.parse(localStorage.getItem('lang')) || 'uz';
+let language = JSON.parse(localStorage.getItem('lang')) || 'ru';
 const article = document.querySelectorAll('.about__list-text');
 const articleText = document.querySelectorAll('.about__list-text p');
 const articleBtn = document.querySelectorAll('.about__list-text span');
